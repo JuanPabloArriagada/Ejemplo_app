@@ -6,18 +6,18 @@
 
 <ion-content class="ion-padding">
   <!-- Al escribir i+algo salen opciones de ionic -->
-  <!-- i-text-alignamenet = star , center, end.  -->
-  <ion-text color="primary" class="ion-text-center" >
-    <h1>Nueva home page</h1>
+  <!-- i-text-alignamenet = start , center, end.  -->
+  <ion-text color="primary" class="ion-text-start" >
+    <h1>Menu</h1>
   </ion-text>
-  <ion-list>
-    <ion-item>
+  <ion-list [inset]="true" lines="none" mode="ios">
+    <ion-item detail="true">
       <ion-label>Home</ion-label>
     </ion-item>
-    <ion-item>
+    <ion-item detail="true">
       <ion-label>Botones</ion-label>
     </ion-item>
-    <ion-item>
+    <ion-item detail="true">
       <ion-label>Alertas</ion-label>
     </ion-item>
   </ion-list>
