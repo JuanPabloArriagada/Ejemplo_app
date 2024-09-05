@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-botones',
@@ -9,7 +10,7 @@ export class BotonesPage implements OnInit {
 
   saludo:string="";
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
     this.saludo='...' /* Este metodo se carga solo mientras la pagina carga */
@@ -17,5 +18,9 @@ export class BotonesPage implements OnInit {
 
   onClick(){
     this.saludo='Hola desde el botón'
+  }
+
+  navegar(){
+    this.router.navigate(['/home'])
   }
 }
