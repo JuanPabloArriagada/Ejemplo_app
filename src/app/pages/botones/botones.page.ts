@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonesPage implements OnInit {
 
+  saludo:string="";
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onClick(){
+    this.saludo='Hola desde el botón'
+  }
 }
