@@ -12,6 +12,7 @@ export class BotonesPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.saludo='...' /* Este metodo se carga solo mientras la pagina carga */
   }
 
   onClick(){
