@@ -43,7 +43,20 @@ export class AlertasPage implements OnInit {
         header: 'Alerta de control',
         subHeader: 'Mensaje si es que',
         message: 'A message should be a short, complete sentence.',
-        buttons: ['Action', 'cancelar'],
+        buttons: [{
+          text:'Aceptar',
+          handler:()=>{
+            console.log("ACEPTAR!");
+          }
+        },
+        {
+          text:'Cancelar',
+          role:'cancel',
+          handler:()=>{
+            console.log("CERRAR!")
+          }
+        }
+      ],
       });
   
       await alert.present();
