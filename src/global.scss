@@ -35,3 +35,15 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+.alert-head{
+    background-color: red;
+}
+
+.color-aceptar{
+    color:var(--ion-color-success) !important;
+}
+
+.color-cancelar{
+    color:var(--ion-color-danger) !important;
+}

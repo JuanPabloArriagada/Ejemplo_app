@@ -13,12 +13,14 @@ export class AlertasPage implements OnInit {
   alertButtons = [{
     /* Nombre del boton */
     text:'Aceptar',
+    cssClass:'color-aceptar',
     handler:()=>{/* Hace cosas despues de apretar el boton */
       console.log("ACEPTAR!");
     }
   },
   {
     text:'Cancelar',
+    cssClass:'color-cancelar',
     role:'cancel',
     handler:()=>{
       console.log("CERRAR!")
@@ -37,7 +39,7 @@ export class AlertasPage implements OnInit {
   ngOnInit() {
   }
 
-  async mostrarAlerta() /* SIempre que haya await va con async, esto es por si no carga la alerta */
+  async mostrarAlerta() /* Siempre que haya await va con async, esto es por si no carga la alerta */
     {
       const alert = await this.alertcontroller.create({
         header: 'Alerta de control',
