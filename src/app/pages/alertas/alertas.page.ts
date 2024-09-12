@@ -40,17 +40,19 @@ export class AlertasPage implements OnInit {
   }
 
 
-  async mostrarAlerta() /* Siempre que haya await va con async, esto es por si no carga la alerta */
+  async mostrarAlerta(event:any) /* Siempre que haya await va con async, esto es por si no carga la alerta */
     {
       const alert = await this.alertcontroller.create({
         header: 'Alerta de control',
         subHeader: 'Mensaje si es que',
         message: 'A message should be a short, complete sentence.',
         buttons: [{
+          id:'Id boton controller',
           text:'Aceptar',
           cssClass:'color-aceptar',
           handler:()=>{
             console.log("ACEPTAR!");
+            console.log(event)
           }
         },
         {
