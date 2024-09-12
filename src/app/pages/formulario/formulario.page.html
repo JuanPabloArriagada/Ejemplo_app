@@ -12,5 +12,23 @@
 <ion-content class="ion-padding">
   <ion-text color="primary" class="ion-text-center">
     <h1>Pagina de formulario</h1>
+
+    <ion-list>
+      <form #miform="ngForm" (ngSubmit)="enviar()">
+        <ion-item>
+          <ion-input type="text" label="Nombre de Usuario" labelPlacement="floating" placeholder="Usuario"></ion-input>
+          
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="password" label="Contraseña de Usuario" labelPlacement="floating" placeholder="Contraseña"></ion-input>
+          
+        </ion-item>
+
+        <ion-button type="submit" expand="block" fill="solid">
+          Iniciar sesión
+        </ion-button>
+      </form>
+    </ion-list>
   </ion-text>
 </ion-content>

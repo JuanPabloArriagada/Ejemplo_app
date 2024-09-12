@@ -12,4 +12,7 @@ export class FormularioPage implements OnInit {
   ngOnInit() {
   }
 
+  enviar(){
+    console.log('Enviado')
+  }
 }
