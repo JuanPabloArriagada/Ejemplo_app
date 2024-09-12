@@ -14,20 +14,24 @@
     <h1>Pagina de formulario</h1>
 
     <ion-list>
-      <form #miform="ngForm" (ngSubmit)="enviar()">
+      <form #miForm="ngForm" (ngSubmit)="enviar()">
         <ion-item>
-          <ion-input type="text" label="Nombre de Usuario" labelPlacement="floating" placeholder="Usuario" name="usuario" [(ngModel)]="usr"></ion-input>
+          <ion-input type="text" required label="Nombre de Usuario" labelPlacement="floating" placeholder="Usuario" name="usuario" [(ngModel)]="usr.username"></ion-input>
           
         </ion-item>
 
         <ion-item>
-          <ion-input type="password" label="Contraseña de Usuario" labelPlacement="floating" placeholder="Contraseña"></ion-input>
+          <ion-input type="password" required label="Contraseña de Usuario" labelPlacement="floating" placeholder="Contraseña" name="password" [(ngModel)]="usr.password"></ion-input>
           
         </ion-item>
 
-        <ion-button type="submit" expand="block" fill="solid">
+        <ion-button type="submit" expand="block" fill="solid" [disabled]="miForm.invalid">
           Iniciar sesión
         </ion-button>
+
+        <ion-text color="primary">
+          <h1> Estado del formulario: {{miForm.valid}}</h1>
+        </ion-text>
       </form>
     </ion-list>
   </ion-text>

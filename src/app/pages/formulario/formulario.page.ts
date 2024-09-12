@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { usuarioLog } from 'src/app/interfaces/usuario-log';
 
 @Component({
   selector: 'app-formulario',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioPage implements OnInit {
 
-  usr:string=''
+  usr:usuarioLog={
+    username:'',
+    password:'',
+  }
 
   constructor() { }
 
