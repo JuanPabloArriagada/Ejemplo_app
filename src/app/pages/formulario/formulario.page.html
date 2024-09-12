@@ -16,7 +16,7 @@
     <ion-list>
       <form #miform="ngForm" (ngSubmit)="enviar()">
         <ion-item>
-          <ion-input type="text" label="Nombre de Usuario" labelPlacement="floating" placeholder="Usuario"></ion-input>
+          <ion-input type="text" label="Nombre de Usuario" labelPlacement="floating" placeholder="Usuario" name="usuario" [(ngModel)]="usr"></ion-input>
           
         </ion-item>
 

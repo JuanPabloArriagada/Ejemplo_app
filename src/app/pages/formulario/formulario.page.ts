@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioPage implements OnInit {
 
+  usr:string=''
+
   constructor() { }
 
   ngOnInit() {
   }
 
   enviar(){
-    console.log('Enviado')
+    console.log('Enviado');
+    console.log(this.usr)
   }
 }
